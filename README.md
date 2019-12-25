@@ -78,4 +78,5 @@ This function allows you to calculate 10-year individual CVD risk using QRISK3-2
 
 **Paper about how to create QRISK3 variables**
 
-    Under review
+    <https://f1000research.com/articles/8-2139>
+    Doi: <https://doi.org/10.12688/f1000research.21679.1> 
