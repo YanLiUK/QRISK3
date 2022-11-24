@@ -4,7 +4,9 @@
 \name{QRISK3_2019_test}
 \alias{QRISK3_2019_test}
 \title{Test data for QRISK3 2017 algorithm - 2019 data}
-\format{An object of class \code{data.frame} with 49 rows and 27 columns.}
+\format{
+An object of class \code{data.frame} with 49 rows and 27 columns.
+}
 \usage{
 data(QRISK3_2019_test)
 }

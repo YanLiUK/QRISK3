@@ -110,3 +110,41 @@ test_that("Test for age lower limit", {
 
   print("Test for age lower limit succeed")
 })
+
+test_that("Test whether age bug was fixed", {
+  data(QRISK3_2019_test)
+  test_all <- QRISK3_2019_test
+
+  test_all_rst <- QRISK3_2017(data=test_all, patid="ID", gender="gender", age="age",
+                              atrial_fibrillation="b_AF", atypical_antipsy="b_atypicalantipsy",
+                              regular_steroid_tablets="b_corticosteroids", erectile_disfunction="b_impotence2",
+                              migraine="b_migraine", rheumatoid_arthritis="b_ra", 
+                              chronic_kidney_disease="b_renal", severe_mental_illness="b_semi",
+                              systemic_lupus_erythematosis="b_sle",
+                              blood_pressure_treatment="b_treatedhyp", diabetes1="b_type1",
+                              diabetes2="b_type2", weight="weight", height="height",
+                              ethiniciy="ethrisk", heart_attack_relative="fh_cvd", 
+                              cholesterol_HDL_ratio="rati", systolic_blood_pressure="sbp",
+                              std_systolic_blood_pressure="sbps5", smoke="smoke_cat", townsend="town")
+
+
+  #rename age to something else 
+  test_all_bug <- test_all
+  test_all_bug$"Age" <- test_all_bug$"age"
+  test_all_bug$"age" <- NULL 
+
+  test_all_rst_new <- QRISK3_2017(data=test_all_bug, patid="ID", gender="gender", age="Age",
+                              atrial_fibrillation="b_AF", atypical_antipsy="b_atypicalantipsy",
+                              regular_steroid_tablets="b_corticosteroids", erectile_disfunction="b_impotence2",
+                              migraine="b_migraine", rheumatoid_arthritis="b_ra", 
+                              chronic_kidney_disease="b_renal", severe_mental_illness="b_semi",
+                              systemic_lupus_erythematosis="b_sle",
+                              blood_pressure_treatment="b_treatedhyp", diabetes1="b_type1",
+                              diabetes2="b_type2", weight="weight", height="height",
+                              ethiniciy="ethrisk", heart_attack_relative="fh_cvd", 
+                              cholesterol_HDL_ratio="rati", systolic_blood_pressure="sbp",
+                              std_systolic_blood_pressure="sbps5", smoke="smoke_cat", townsend="town")
+
+  expect_equal(test_all_rst, test_all_rst_new)
+  print("Age bug was fixed !")
+})

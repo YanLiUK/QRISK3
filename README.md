@@ -1,5 +1,9 @@
 # QRISK3 R package
 
+**Update**
+
+This respiratory has been updated to ver0.4 as CRAN version.
+
 **Introduction**
 
 This function allows you to calculate 10-year individual CVD risk using QRISK3-2017.

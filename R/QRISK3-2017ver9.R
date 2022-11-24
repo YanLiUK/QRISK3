@@ -1,4 +1,4 @@
-# PROGRAM NAME:       QRISK3.sas                                                                                                                                                                          ;
+# PROGRAM NAME:       QRISK3.r                                                                                                                                                                          ;
 # PROGRAM LOCATION:                       ;
 # PROGRAM PURPOSE:        To create QRISK3 according to the online free algorithm (https://qrisk.org/three/src.php)                                                                         
 # QRISK3 calculator copyright to ClinRisk Ltd.                                                                                                      
@@ -204,6 +204,9 @@ if (length(missList) !=0) {
     stop(paste0("Variables including ", paste0(missList, collapse = ", "), ' has missing values.')) 
 }
 
+#Update 2022.11.21: Also replace the age with the user-defined age 
+colnames(dt)[names(dt)==age] <- "age"
+
 #update Check whether age is between 25 and 84
 if (min(dt$age) <25 | max(dt$age) >84) {
     stop(paste0("Age of patients must be between 25 and 84.")) 
@@ -212,9 +215,6 @@ if (min(dt$age) <25 | max(dt$age) >84) {
 #Replace the user-defined column names to QRISK3 variable names
 for (i in 1:length(varListNDR)) {
 colnames(dt)[names(dt)==varListNDR[i]] <- varListReplace[i]}
-
-
-
 
 #Assign coded variables
 dt$ethrisk <- dt$Ethincity
@@ -519,4 +519,5 @@ dt$order <- as.numeric(rownames(dt))
    message(paste0(capture.output(head(dtRstF)), collapse = "\n"))
   #  print(head(dtRstF))
    return(dtRstF)
- }
+}
+
