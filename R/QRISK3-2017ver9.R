@@ -1,6 +1,6 @@
 # PROGRAM NAME:       QRISK3.r                                                                                                                                                                          ;
 # PROGRAM LOCATION:                       ;
-# PROGRAM PURPOSE:        To create QRISK3 according to the online free algorithm (https://qrisk.org/three/src.php)                                                                         
+# PROGRAM PURPOSE:        To create QRISK3 according to the online free algorithm QRISK3-2017 published by ClinRisk Ltd.                                                                           
 # QRISK3 calculator copyright to ClinRisk Ltd.                                                                                                      
 
 # Metadata;
@@ -119,12 +119,15 @@ QRISK3_2017 <- function(data, patid, gender, age,
                             weight, height, ethiniciy, heart_attack_relative, cholesterol_HDL_ratio, systolic_blood_pressure,
                             std_systolic_blood_pressure, smoke, townsend) {
 
-message("\nThis R package was based on open-sourced original QRISK3-2017 algorithm.")
-message("<https://qrisk.org/three/src.php> Copyright 2017 ClinRisk Ltd.")
+message("\nThis unofficial R package was based on open-sourced free original QRISK3-2017 algorithm")
+message("\nYou may find the source code and the official disclaimer of the original open-sourced")
+message("\nQRISK3-2017 algorithm (published by ClinRisk Ltd.) from below path by runing following in R")
+message('\nsourcePath <- system.file("extdata/QRISK3_2017_src.txt", package = "QRISK3")')
+message("\nprint(sourcePath)")
 
 message("\nThe risk score calculated from this R package can only be used for research purpose.")
-message("\nPlease refer to QRISK3 website for more information")
-message("<https://qrisk.org/three/index.php>")
+message("\nYou may want to visit official QRISK3 website for more information")
+message("\nhttps://qrisk.org/")
 
 #For R CMD checking
 b_AF <- b_atypicalantipsy <- b_corticosteroids <- b_impotence2 <-  b_migraine <- b_ra <- NULL
