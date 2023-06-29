@@ -2,7 +2,7 @@
 
 **Update**
 
-This respiratory has been updated to ver0.4 as CRAN version.
+This respiratory has been updated to ver0.5 as CRAN version.
 
 **Introduction**
 
