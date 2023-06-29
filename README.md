@@ -8,7 +8,7 @@ This respiratory has been updated to ver0.5 as CRAN version.
 
 This function allows you to calculate 10-year individual CVD risk using QRISK3-2017.
 
-    The original QRISK3 model formula <https://qrisk.org/three/src.php> 
+    The original QRISK3 model formula <https://qrisk.org/src.php> 
     including original variable names and model beta coefficients
     is under the license of LGPL and copyright to ClinRisk Ltd. 
 
