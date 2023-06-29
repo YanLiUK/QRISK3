@@ -1,14 +1,14 @@
 Package: QRISK3
 Title: 10-Year Cardiovascular Disease Risk Calculator (QRISK3 2017)
-Version: 0.4.0
+Version: 0.5.0
 Author: Yan Li <bluefatterplaydota@gmail.com> [aut, cre, trl],
         Matthew Sperrin [aut, ctb],
 		ClinRisk Ltd. [cph],
 		Tjeerd Pieter van Staa [aut, ths]
 Maintainer: Yan Li <bluefatterplaydota@gmail.com>
-Description: This function aims to calculate risk of developing cardiovascular disease of individual patients in next 10 years. The package was based on published risk prediction algorithm <https://qrisk.org/three/src.php>. 
+Description: This function aims to calculate risk of developing cardiovascular disease of individual patients in next 10 years. This unofficial package was based on published open-sourced free risk prediction algorithm QRISK3-2017 <https://qrisk.org/src.php>. 
 Copyright: file inst/COPYRIGHTS
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 7.2.0
+RoxygenNote: 7.2.3
