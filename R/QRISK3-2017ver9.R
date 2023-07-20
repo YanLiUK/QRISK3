@@ -207,6 +207,8 @@ if (length(missList) !=0) {
     stop(paste0("Variables including ", paste0(missList, collapse = ", "), ' has missing values.')) 
 }
 
+#Update 2023.07.20: Also replace the gender with the user-defined gender 
+colnames(dt)[names(dt)==gender] <- "gender"
 #Update 2022.11.21: Also replace the age with the user-defined age 
 colnames(dt)[names(dt)==age] <- "age"
 
